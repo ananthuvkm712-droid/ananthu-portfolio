@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+@font-face {
+  font-family: "Betterlett";
+  src: url("/fonts/Betterlett.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.betterlett {
+  font-family: "Betterlett", cursive;
+}
+@font-face {
+  font-family: "goodtiming";
+  src: url("/fonts/goodtiming.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.goodtiming {
+  font-family: "goodtiming", cursive;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 10s ease-in-out infinite;
+}
+@keyframes iconFloat {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.icon-float {
+  animation: iconFloat 5s ease-in-out infinite;
+}
+@keyframes softFloat1 {
+  0%,100% { transform: translateY(0px) rotate(-6deg); }
+  50% { transform: translateY(-12px) rotate(-2deg); }
+}
+
+@keyframes softFloat2 {
+  0%,100% { transform: translateY(0px) rotate(6deg); }
+  50% { transform: translateY(10px) rotate(2deg); }
+}
+
+@keyframes softFloat3 {
+  0%,100% { transform: translateY(0px) rotate(-4deg); }
+  50% { transform: translateY(-8px) rotate(-8deg); }
+}
+
+@keyframes softFloat4 {
+  0%,100% { transform: translateY(0px) rotate(5deg); }
+  50% { transform: translateY(14px) rotate(8deg); }
+}
+
+@keyframes softFloat5 {
+  0%,100% { transform: translateY(15px) rotate(15deg); }
+  50% { transform: translateY(25px) rotate(45deg); }
+}
+
+@keyframes softFloat6 {
+  0%,100% { transform: translateY(0px) rotate(45deg); }
+  50% { transform: translateY(-5px) rotate(-5deg); }
+}
+@keyframes softFloat7 {
+  0%,100% { transform: translateY(0px) rotate(7deg); }
+  50% { transform: translateY(-7px) rotate(-8deg); }
+}
+@keyframes softFloat8 {
+  0%,100% { transform: translateY(0px) rotate(15deg); }
+  50% { transform: translateY(12px) rotate(-8deg); }
+}
+.soft-float-1 {
+  animation: softFloat1 6s ease-in-out infinite;
+}
+
+.soft-float-2 {
+  animation: softFloat2 7s ease-in-out infinite;
+}
+
+.soft-float-3 {
+  animation: softFloat3 5s ease-in-out infinite;
+}
+
+.soft-float-4 {
+  animation: softFloat4 8s ease-in-out infinite;
+}
+.soft-float-5 {
+  animation: softFloat5 4s ease-in-out infinite;
+}
+.soft-float-6 {
+  animation: softFloat6 5s ease-in-out infinite;
+  
+}
+.soft-float-7 {
+  animation: softFloat7 6s ease-in-out infinite;
+}
+.soft-float-8 {
+  animation: softFloat8 6s ease-in-out infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+.portfolio-card {
+  overflow: hidden;
+  border-radius: 30px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  transition: all .4s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0,212,255,.5);
+  box-shadow: 0 0 40px rgba(0,212,255,.15);
+}
+
+.portfolio-card img {
+  transition: transform .5s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
